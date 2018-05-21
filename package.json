@@ -1,0 +1,30 @@
+{
+  "name": "mulgit",
+  "version": "1.0.0",
+  "description": "Simple bash 4 script that runs Git commands against multiple directories / repositories.",
+  "bin": {
+    "mulgit": "./src/mulgit.sh",
+    "mulgitwin": "./src/mulgit.cmd"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgalentine007/mulgit.git"
+  },
+  "keywords": [
+    "Git",
+    "multiple",
+    "multi",
+    "folders",
+    "directories",
+    "repositories"
+  ],
+  "author": "Jonathan Galentine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgalentine007/mulgit/issues"
+  },
+  "homepage": "https://github.com/jgalentine007/mulgit#readme"
+}
