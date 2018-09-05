@@ -18,7 +18,7 @@ then
     exit 1
 fi
 
-readarray REPOS < $GITREPOBASE/.mulgit
+readarray -t REPOS < <(tr -d "\r" < $GITREPOBASE/.mulgit)
 
 printf "${WHITE}Verifying repository paths...${NC}\n"
 
@@ -48,7 +48,7 @@ for i in "${REPOS[@]}"
 do
     cd $GITREPOBASE
     cd $i
-    printf "${CYAN}Output from $i"
+    printf "${CYAN}Output from $i\n"
     printf "===========================${NC}\n\n"
     exe git "${@}"
     printf "\n\n"
