@@ -6,7 +6,7 @@ WHITE="\033[1;37m"
 NC="\033[0m"
 RED="\033[0;31m"
 
-exe() { echo "\$ $@" ; "$@" ; }
+exe() { printf "\$ $@" ; "$@" ; }
 anykey() { printf "${WHITE}Press any key to continue...${NC}"; read -n1; }
 
 GITREPOBASE=`git rev-parse --show-toplevel`
@@ -14,7 +14,7 @@ CONFIG="$GITREPOBASE/.mulgit"
 
 if [ ! -f "$CONFIG" ]
 then
-    echo "${RED}Unable to find $CONFIG${NC}"
+    printf "${RED}Unable to find $CONFIG${NC}"
     exit 1
 fi
 
